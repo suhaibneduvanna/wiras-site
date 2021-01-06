@@ -605,8 +605,9 @@ p {
 }
 
 .navbar .navbar-toggler {
+    
 	padding: 3px 8px;
-	margin: 18px 0;
+	margin-left:auto;
      -webkit-transform: all 0.4s linear;
     transform: all 0.4s linear;
 }
@@ -806,18 +807,20 @@ p {
 }
 
 .slider-cont{
-    position: relative;
+    position: absolute;
     z-index: 5;
 }
 .slider-cont h1{
-    font-size: 60px;
+    align-self: center;
+    font-size: 6vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #fff;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 .slider-cont p{
-    font-size: 18px;
+    line-height: 100%;
+    font-size: 3vw;
     color: #fff;
     font-weight: 600;
     padding-bottom: 50px;

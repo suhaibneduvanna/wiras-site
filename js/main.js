@@ -18,15 +18,7 @@ $(function() {
         $('.preloader').delay(500).fadeOut(500);
     });
     
-    
-    //===== Search
-    
-    $('#search').on('click', function(){
-        $(".search-box").fadeIn(600);
-    });
-    $('.closebtn').on('click', function(){
-        $(".search-box").fadeOut(600);
-    });
+  
     
     
     //===== Sticky

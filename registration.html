@@ -352,9 +352,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div  style="visibility: hidden;" id="success-message">
-                            <p  style="color: green;">Submitted successfully</p>
-                        </div>
+                        
                         <div class="p-t-15">
                             <button class="main-btn" type="submit">Submit</button>
                         </div>
@@ -365,11 +363,23 @@
         </div>
     </div>
     <div id="cover-spin" class="spinner-border text-primary"></div>
+    <div id="loader" style="display: none;" class="preloader">
+        <div class="loader rubix-cube">
+            <div class="layer layer-1"></div>
+            <div class="layer layer-2"></div>
+            <div class="layer layer-3 color-1"></div>
+            <div class="layer layer-4"></div>
+            <div class="layer layer-5"></div>
+            <div class="layer layer-6"></div>
+            <div class="layer layer-7"></div>
+            <div class="layer layer-8"></div>
+        </div>
+    </div>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-    var successMsg = $('#success-message')
-    var spinner = $('#cover-spin');
+ 
+    var loader = $('#loader');
             $("#submit-form").submit((e)=>{
                 e.preventDefault()
                 spinner.show();
@@ -378,9 +388,9 @@
                     data:$("#submit-form").serialize(),
                     method:"post",
                     success:function (response){
-                        spinner.hide();
+                        loader.hide();
                         alert("Successfully submitted")
-                        document.getElementById("success-message").style.visibility= "visible"
+                        
                         document.getElementById('nameinp').value = ""
                         document.getElementById('emailinp').value = ""
                         document.getElementById('whatsappinp').value = ""

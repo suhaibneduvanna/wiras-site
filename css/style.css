@@ -422,7 +422,7 @@ p {
     color: black;
 }
 .header-bg{
-    background-color: #07294d;
+    background-color: #07294de3;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -494,8 +494,8 @@ p {
 
 /*===== Header Menu =====*/
 
-.navigation{
-    border-bottom: 1px solid white
+.navigation{  
+box-shadow: 1px 2px 3px rgba(0,0,0,.5);
 }
 
 .navigation.sticky {

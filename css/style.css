@@ -495,7 +495,7 @@ p {
 /*===== Header Menu =====*/
 
 .navigation{  
-box-shadow: 1px 2px 3px black;
+box-shadow: 1px 2px 3px #000000;
 }
 
 .navigation.sticky {

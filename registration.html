@@ -379,7 +379,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
  
-    var loader = $('#loader');
+    var spinner = $('#loader');
             $("#submit-form").submit((e)=>{
                 e.preventDefault()
                 spinner.show();
@@ -388,7 +388,7 @@
                     data:$("#submit-form").serialize(),
                     method:"post",
                     success:function (response){
-                        loader.hide();
+                        spinner.hide();
                         alert("Successfully submitted")
                         
                         document.getElementById('nameinp').value = ""

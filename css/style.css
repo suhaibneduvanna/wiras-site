@@ -396,7 +396,11 @@ p {
 
 
 
-
+.modal-body p {
+    text-align: justify;
+    line-height: 200%;
+    margin: 10px;
+}
 
 /*=====================================================
     2. HEADER css 
@@ -1090,7 +1094,7 @@ box-shadow: 1px 2px 3px #000000;
 
 #about-part{
     position: relative;
-    padding-bottom: 220px;
+   
 }
 .about-bg{
     width: 52%;
@@ -1178,6 +1182,7 @@ box-shadow: 1px 2px 3px #000000;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
 .apply-color-2{
     background-color: #092e56;
     border-top-right-radius: 5px;

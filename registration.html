@@ -351,6 +351,12 @@
                                     <input id="desinp" required class="input--style-4" type="text" required name="DESIGNATION">
                                 </div>
                             </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Designation</label>
+                                    <input id="desinp" required class="input--style-4" type="file" required name="file">
+                                </div>
+                            </div>
                         </div>
                         
                         <div class="p-t-15">
@@ -384,7 +390,7 @@
                 e.preventDefault()
                 spinner.show();
                 $.ajax({
-                    url:"https://script.google.com/macros/s/AKfycbz1GsjKiJKho0ys4V_hAe4ZLcaefMH9Z1W9e8Jo_Q/exec",
+                    url:"https://script.google.com/macros/s/AKfycby5Iw2vZ4PgGmhrW1yzsJtXwKG8dSQZyn5DkGf6jmH3lK_dvvblBNV2/exec",
                     data:$("#submit-form").serialize(),
                     method:"post",
                     success:function (response){

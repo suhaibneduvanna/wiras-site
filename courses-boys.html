@@ -55,48 +55,36 @@
 
     <!--====== PRELOADER PART START ======-->
 
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-
-            <!-- Modal content-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="col-11 modal-title text-center">Applications for WIRAS PG course are
-                        invited<br>
-                        <span style="color: blue;"> Interview : 9:00 AM Tuesday, March 23  </span></h5>
 
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-
-
+                    <h5 class="modal-title" id="exampleModalLabel">WIRAS eligibility test results</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <p>Knowledge City: World Institute for Research in Advanced Sciences (WIRAS), Islamic education
-                        Institution in Markaz Knowledge City has invited applications for Post Graduation in Islamic
-                        Studies & Modern Law.</p>
-                    <p>Apart from PG course of WIRAS, Students who completes the course have also the opportunity to
-                        become Advocate / Unani Doctor upto their choice.
-                    </p>
-                    <p>Admission to the PG course is open to those who have a degree in Mukhtasar or have completed the
-                        fifth year of Jamiatul Hind degree with a bachelor degree recognized by Calicut University.
-                    </p>
-                    <p>Date of interview will be informed later</p>
-                    <p>Only those who registered online will have the opportunity to attend the camp.</p>
-                    <p>There will be a written test on the same day too.</p>
-                    <p>Those who pass the exam can only ensure their admission after the final viva interview.
-                    </p>
-                    <p>For more details:<br>Whatsapp or call:
-                        <a href="https://wa.me/+919747708786">+919747708786</a>
-                    </p>
+                    <form id="add-student-form">
+                        <label for="" class="sr-only">Register no</label>
+                        <input id="regno" class="form-control mb-3" placeholder="eg: WET-100" required autofocus>
+                        <label for="" class="sr-only">Mobile</label>
+                        <input id="mob" class="form-control" type="tel" placeholder="eg: 1234567890" required autofocus>
+                    </form>
+
+
+
                 </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <a type="button" class="main-btn" href="https://forms.gle/MEoJNzGxGiPjQDgx5">Apply</a>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="btn1" type="button" onclick="searchResult()" class="btn btn-primary">Search</button>
                 </div>
             </div>
-
         </div>
     </div>
-
     <!--====== HEADER PART START ======-->
 
     <header id="header-part">
@@ -156,14 +144,16 @@
                             <li class="nav-item">
                                 <a class="text-white" href="contact.html">Contact US</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="text-white" href="#">Results</a>
+                                <ul class="sub-menu">
+                                    <li><a data-toggle="modal" data-target="#myModal">WIRAS Eligibility Test
+                                            (WET)</a></li>
 
+                            </li>
 
                         </ul>
-                        <div>
-                            <button type="button" class="main-btn" data-toggle="modal" data-target="#myModal">
-                                Apply
-                            </button>
-                        </div>
+                        
                     </div>
 
                 </nav>
@@ -438,9 +428,11 @@
 
     <!--====== Slick js ======-->
     <script src="js/slick.min.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <!--====== Main js ======-->
     <script src="js/main.js"></script>
+    <script src="js/firebase.js"></script>
 
 </body>
 

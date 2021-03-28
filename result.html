@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>WIRAS- World Institute for Research in Advanced Sciences</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="icon" href="images/fav.png" type="image/png">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Montserrat:wght@400;800&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Teko:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@900&display=swap"
+        rel="stylesheet">
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="container p-5 ">
+            <div class="row">
+                <div class="mb-5">
+                    <h1>WET (Wiras Eligibility Test) Result 2021</h1>
+                </div>
+                <table class="table">
+
+                    <tbody>
+                        <tr>
+                            <th>Register no</td>
+                            <td id="regnotd"></td>
+                        </tr>
+                        <tr>
+                            <th>Name</td>
+                            <td id="nametd"></td>
+                        </tr>
+                        <tr>
+                            <th>Mobile</td>
+                            <td id="mobiletd"></td>
+
+                        </tr>
+                        <tr>
+                            <th>Status</td>
+                            <td id="statustd"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+</body>
+<!--====== jquery js ======-->
+<script src="js/jquery-1.12.4.min.js"></script>
+
+<!--====== Bootstrap js ======-->
+<script src="js/bootstrap.min.js"></script>
+
+<!--====== Slick js ======-->
+<script src="js/slick.min.js"></script>
+
+<!--====== Main js ======-->
+<script src="js/main.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script>
+    let url = window.location.href
+    var url1 = new URL(url)
+    let Regno = url1.searchParams.get("regno")
+    let Name = url1.searchParams.get("name")
+    let Mob = url1.searchParams.get("mob")
+    let Status = url1.searchParams.get("status")
+    console.log(Mob)
+    document.getElementById('regnotd').innerHTML = Regno
+    document.getElementById('nametd').innerHTML = Name
+    document.getElementById('mobiletd').innerHTML = Mob
+    document.getElementById('statustd').innerHTML = Status
+
+</script>
+
+</html>

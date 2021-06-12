@@ -8,7 +8,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
 
     <!--====== Title ======-->
     <title>WIRAS- World Institute for Research in Advanced Sciences</title>
@@ -184,7 +184,7 @@
 
                 onload: $("#loader").show(),
                 type: 'get',
-                url: 'http://wiras.infinityfreeapp.com/getSubjects.php',
+                url: 'https://rewaq.in/getSubjects.php',
 
                 success: function (result) {
 
@@ -201,7 +201,7 @@
             $.ajax({
                 onload: $("#loader").show(),
                 type: 'get',
-                url: 'http://wiras.infinityfreeapp.com/getStudents.php',
+                url: 'https://rewaq.in/getStudents.php',
 
                 success: function (result) {
 
@@ -277,7 +277,7 @@
             $.ajax({
                 onload: $("#loader").show(),
                 type: 'post',
-                url: 'http://wiras.infinityfreeapp.com/login.php',
+                url: 'https://rewaq.in/login.php',
                 data: $("#loginform").serialize(),
                 success: function (result) {
                     if (result) {
